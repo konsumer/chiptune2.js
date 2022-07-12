@@ -1,6 +1,9 @@
 # Chiptune.js
 #### Version 2
 
+> **konsumer:** This has been modified to work in more ES6 environments. It makes no assumptions about web/node/etc. `AudioContext` should be global or passed to `ChiptuneJsConfig`
+
+
 This is a javascript library that can play module music files. It is based on the [libopenmpt](https://lib.openmpt.org/libopenmpt) C/C++ library. To translate libopenmpt into Javascript [emscripten](https://github.com/kripken/emscripten) was used. For audio output inside the browser WebAudio API is used.
 
 **Please note**: The compiled `libopenmpt.js` in this repository is based on an outdated version of libopenmpt. Newer versions contain bugfixes and other improvements. Download the latest version from the libopenmpt developers [here](https://lib.openmpt.org/libopenmpt/download/) and replace `libopenmpt.js.mem` and `libopenmpt.js`.  

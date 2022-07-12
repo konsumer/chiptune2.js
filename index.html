@@ -1,0 +1,14 @@
+<div id="info">Click on the page to load music</div>
+
+<script type="module">
+import { ChiptuneJsConfig, ChiptuneJsPlayer } from './chiptune2.mjs'
+
+const buffer = await fetch('brainless_introtune.mod').then(r => r.arrayBuffer())
+
+document.onclick = () => {
+  const c = new ChiptuneJsPlayer(new ChiptuneJsConfig(-1))
+  c.play(buffer)
+  document.getElementById('info').innerHTML = 'Ok, playing...' + '<pre>' + JSON.stringify(c.metadata(), null, 2) + '</pre>'
+}
+
+</script>
